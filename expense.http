@@ -2,7 +2,7 @@
 GET http://localhost:3000/report/income HTTP/1.1
 
 ### find expense
-GET http://localhost:3000/report/expense HTTP/1.1
+GET http://localhost:3000/report/expense/uuid3 HTTP/1.1
 
 ### find by id
 GET http://localhost:3000/report/income/id HTTP/1.1

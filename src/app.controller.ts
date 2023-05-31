@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Delete, Put, Param } from "@nestjs/common"
-import { log } from "console"
+import { data, ReportType } from 'src/data'
 
 @Controller("report/:type")
 export class AppController {
@@ -7,13 +7,16 @@ export class AppController {
   getAllReports(
     @Param('type') type: string
   ) {
-    console.log(`type : ${type}`)
-    return []
+    const reportType = type === "income" ? ReportType.INCOME : ReportType.EXPENSE
+    return data.report.filter((report) => report.type === reportType)
   }
 
   @Get(':id')
-  getReportById() {
-    return {}
+  getReportById(
+    @Param('type') type: string, @Param('id') id: string
+  ) {
+    const reportType = type === "income" ? ReportType.INCOME : ReportType.EXPENSE
+    return data.report.filter((report) => report.type === reportType).find((report) => report.id === id)
   }
 
   @Post()
