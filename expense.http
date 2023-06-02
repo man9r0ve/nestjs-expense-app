@@ -9,12 +9,17 @@ GET http://localhost:3000/report/income/id HTTP/1.1
 
 ### create
 POST http://localhost:3000/report/income HTTP/1.1
-Content-Type: application/json; charset=utf-8
+content-type: application/json
+
+{
+    "amount": 7000,
+    "source": "Udemy"
+}
 
 ### update
 PUT http://localhost:3000/report/income/123 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 ### delete
-DELETE http://localhost:3000/report/income/123 HTTP/1.1
+DELETE http://localhost:3000/report/income/6670594e-8d3c-4e1e-934a-7f15d5cd35b2 HTTP/1.1
 Content-Type: application/json; charset=utf-8
