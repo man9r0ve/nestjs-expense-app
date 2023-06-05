@@ -40,8 +40,3 @@ interface Data {
         type: ReportType;
     }[]
 }
-
-export interface Report {
-    amount: number, 
-    source: string
-}
