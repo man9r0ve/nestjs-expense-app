@@ -28,7 +28,14 @@ export class ResponseReportDto {
   id: string;
   source: string;
   amount: number;
+  
+  @Exclude()
   created_at: Date;
+
+  @Expose({name: "createdAt"})
+  transformCreatedAt() {
+    return this.created_at;
+  }
 
   @Exclude()
   updated_at: Date;
