@@ -7,7 +7,6 @@ export interface Report {
   source: string
 }
 
-
 export interface UpdateReport {
   amount?: number, 
   source?: string
