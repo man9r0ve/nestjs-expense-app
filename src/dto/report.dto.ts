@@ -28,7 +28,7 @@ export class ResponseReportDto {
   id: string;
   source: string;
   amount: number;
-  
+
   @Exclude()
   created_at: Date;
 
@@ -39,6 +39,7 @@ export class ResponseReportDto {
 
   @Exclude()
   updated_at: Date;
+
   type: ReportType;
 
   constructor(partial: Partial<ResponseReportDto>) {
