@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  expense-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: man9r0ve/nest-expense-app
+    ports:
+      - "3000:3000"
+    container_name: nest-expense-app
