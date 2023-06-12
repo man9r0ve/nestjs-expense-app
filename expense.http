@@ -1,7 +1,7 @@
-### find income
+### find all income
 GET http://localhost:3000/report/income
 
-### find expense
+### find all expense
 GET http://localhost:3000/report/expense
 
 ### find expense
@@ -25,7 +25,6 @@ Content-Type: application/json; charset=utf-8
 
 ### delete
 DELETE http://localhost:3000/report/income/6875ad93-7fd9-4cbc-9624-cd20f1d5502c
-
 
 ### summary
 GET http://localhost:3000/summary
