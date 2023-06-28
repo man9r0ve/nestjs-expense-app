@@ -19,7 +19,7 @@ pipeline {
 
         stage('Create/Build docker image') {
             steps {
-                sh 'docker build man9r0ve/nestjs-expense-app:v$BUILD_NUMBER .'
+                sh 'docker build --tag man9r0ve/nestjs-expense-app:v$BUILD_NUMBER .'
             }
         }
 
