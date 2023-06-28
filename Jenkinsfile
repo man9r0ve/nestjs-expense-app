@@ -3,10 +3,12 @@ pipeline {
     tools { nodejs('NodeJS 18.16.0 LTS') }
 
     stages {
-        stage('nodejs 18') {
+        stage('build check') {
             steps {
                 echo "NodeJS Version ======================"
                 sh 'node --version'
+                echo "Docker Version ======================"
+                sh 'docker --version'
             }
         }
 
@@ -19,7 +21,7 @@ pipeline {
 
         stage('Create/Build docker image') {
             steps {
-                sh 'docker build --tag man9r0ve/nestjs-expense-app:v$BUILD_NUMBER .'
+                sh 'docker build --tag man9r0ve/nestjs-expense-app:v${BUILD_NUMBER} .'
             }
         }
 
