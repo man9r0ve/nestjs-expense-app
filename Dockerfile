@@ -5,7 +5,8 @@ WORKDIR /var/app
 
 COPY . .
 
-RUN npm install && npm run build
+# 빌드는 jenkins 에서 실행
+# RUN npm install && npm run build
 
 EXPOSE 3000
 
